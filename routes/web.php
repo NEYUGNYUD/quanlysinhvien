@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('test', function() {
-    return view('test.test');
+    return view('test.ckeditor');
 });

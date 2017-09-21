@@ -15,5 +15,5 @@
         } );
     }
 </script>
-<input type="text" size="48" name=" {{ $name }}" id="{{ $id }}" />
-<button onclick="openPopup()">Select file</button>
+<input type="text" size="48" name=" {{ $name }}" id="{{ $id }}" class="form-control" />
+<button onclick="openPopup()" class="btn btn-default">Select file</button>
