@@ -14,17 +14,18 @@ class CreateTableStudents extends Migration
     public function up()
     {
         if(!Schema::hasTable('students')) {
-            Schema::create('students', function(Blueprint $table) {
-                $table->increments('id');
-                $table->string('code', 15);
-                $table->string('first_name', 50);
-                $table->string('last_name', 30);
-                $table->date('dob');
-                $table->char('gender', 1);
-                $table->string('password');
-                $table->timestamps();
-            });
-        }
+        Schema::create('students', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('code', 15);
+            $table->string('first_name', 50);
+            $table->string('last_name', 30);
+            $table->date('dob');
+            $table->char('gender', 1);
+            $table->string('address');
+            $table->string('password');
+            $table->timestamps();
+        });
+    }
     }
 
     /**
