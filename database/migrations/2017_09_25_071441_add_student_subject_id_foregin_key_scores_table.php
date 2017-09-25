@@ -30,7 +30,7 @@ class AddStudentSubjectIdForeginKeyScoresTable extends Migration
     {
         Schema::table('scores', function(Blueprint $table) {
             $table->dropColumn('student_subject_id');
-            $table->dropForeign('student_subject_id');
+            $table->dropForeign('scores_student_subject_id_foreign');
         });
     }
 }

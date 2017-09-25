@@ -16,7 +16,7 @@ class AddClassIdForeignKeyStudentsTable extends Migration
         if(!Schema::hasColumn('students', 'class_id')) {
             Schema::table('students', function(Blueprint $table) {
                 $table->integer('class_id')->unsigned();
-                $table->foreign('class_id')->references('id')->on('students');
+                $table->foreign('class_id')->references('id')->on('classes');
             });
         }
     }
@@ -29,8 +29,8 @@ class AddClassIdForeignKeyStudentsTable extends Migration
     public function down()
     {
         Schema::table('students', function(Blueprint $table) {
+            $table->dropForeign('students_class_id_foreign');
             $table->dropColumn('class_id');
-            $table->dropForeign('class_id');
         });
     }
 }

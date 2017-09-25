@@ -29,8 +29,8 @@ class AddForeignKeySubjectsTable extends Migration
     public function down()
     {
         Schema::table('subjects', function(Blueprint $table) {
+            $table->dropForeign('subjects_teacher_id_foreign');
             $table->dropColumn('teacher_id');
-            $table->dropForeign('teacher_id');
         });
     }
 }
