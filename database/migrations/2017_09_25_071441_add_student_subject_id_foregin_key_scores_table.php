@@ -29,8 +29,8 @@ class AddStudentSubjectIdForeginKeyScoresTable extends Migration
     public function down()
     {
         Schema::table('scores', function(Blueprint $table) {
-            $table->dropColumn('student_subject_id');
             $table->dropForeign('scores_student_subject_id_foreign');
+            $table->dropColumn('student_subject_id');
         });
     }
 }

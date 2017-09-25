@@ -29,8 +29,8 @@ class AddForeignKeyTeachersTable extends Migration
     public function down()
     {
         Schema::table('teachers', function(Blueprint $table) {
-            $table->dropColumn('faculty_id');
             $table->dropForeign('teachers_faculty_id_foreign');
+            $table->dropColumn('faculty_id');
         });
     }
 }
