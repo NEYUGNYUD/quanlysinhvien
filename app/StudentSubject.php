@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class StudentSubject extends Model
 {
     protected $table = 'students_subjects';
+    protected $timestamps = false;
 
     public function student() {
         return $this->belongsTo('App\Student', 'student_id', 'id');

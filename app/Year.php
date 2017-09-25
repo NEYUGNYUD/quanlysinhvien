@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Year extends Model
 {
     protected $table = 'years';
+    protected $timestamps = false;
 
     public function students() {
         return $this->hasMany('App\Student', 'year_start', 'id');
