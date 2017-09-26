@@ -7,7 +7,7 @@ use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Psr7;
 
 /**
- * @internal Decorates a parser and validates the x-amz-crc32 header.
+ * @internal Decorates a parser and validates the x-amz-crc32 head.
  */
 class Crc32ValidatingParser extends AbstractParser
 {

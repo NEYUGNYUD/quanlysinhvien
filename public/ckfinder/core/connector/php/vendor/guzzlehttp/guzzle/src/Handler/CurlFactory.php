@@ -255,7 +255,7 @@ class CurlFactory implements CurlFactoryInterface
             !empty($options['_body_as_string'])
         ) {
             $conf[CURLOPT_POSTFIELDS] = (string) $request->getBody();
-            // Don't duplicate the Content-Length header
+            // Don't duplicate the Content-Length head
             $this->removeHeader('Content-Length', $conf);
             $this->removeHeader('Transfer-Encoding', $conf);
         } else {
@@ -273,7 +273,7 @@ class CurlFactory implements CurlFactoryInterface
             };
         }
 
-        // If the Expect header is not present, prevent curl from adding it
+        // If the Expect head is not present, prevent curl from adding it
         if (!$request->hasHeader('Expect')) {
             $conf[CURLOPT_HTTPHEADER][] = 'Expect:';
         }
@@ -292,16 +292,16 @@ class CurlFactory implements CurlFactoryInterface
             }
         }
 
-        // Remove the Accept header if one was not set
+        // Remove the Accept head if one was not set
         if (!$easy->request->hasHeader('Accept')) {
             $conf[CURLOPT_HTTPHEADER][] = 'Accept:';
         }
     }
 
     /**
-     * Remove a header from the options array.
+     * Remove a head from the options array.
      *
-     * @param string $name    Case-insensitive header to remove
+     * @param string $name    Case-insensitive head to remove
      * @param array  $options Array of options to modify
      */
     private function removeHeader($name, array &$options)
@@ -350,7 +350,7 @@ class CurlFactory implements CurlFactoryInterface
                 $conf[CURLOPT_ENCODING] = $accept;
             } else {
                 $conf[CURLOPT_ENCODING] = '';
-                // Don't let curl send the header over the wire
+                // Don't let curl send the head over the wire
                 $conf[CURLOPT_HTTPHEADER][] = 'Accept-Encoding:';
             }
         }
@@ -542,7 +542,7 @@ class CurlFactory implements CurlFactoryInterface
                         $onHeaders($easy->response);
                     } catch (\Exception $e) {
                         // Associate the exception with the handle and trigger
-                        // a curl header write error by returning 0.
+                        // a curl head write error by returning 0.
                         $easy->onHeadersException = $e;
                         return -1;
                     }

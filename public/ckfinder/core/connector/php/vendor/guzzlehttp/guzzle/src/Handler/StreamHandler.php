@@ -37,10 +37,10 @@ class StreamHandler
         $startTime = isset($options['on_stats']) ? microtime(true) : null;
 
         try {
-            // Does not support the expect header.
+            // Does not support the expect head.
             $request = $request->withoutHeader('Expect');
 
-            // Append a content-length header if body size is zero to match
+            // Append a content-length head if body size is zero to match
             // cURL's behavior.
             if (0 === $request->getBody()->getSize()) {
                 $request = $request->withHeader('Content-Length', 0);
@@ -166,9 +166,9 @@ class StreamHandler
                     );
                     $headers['x-encoded-content-encoding']
                         = $headers[$normalizedKeys['content-encoding']];
-                    // Remove content-encoding header
+                    // Remove content-encoding head
                     unset($headers[$normalizedKeys['content-encoding']]);
-                    // Fix content-length header
+                    // Fix content-length head
                     if (isset($normalizedKeys['content-length'])) {
                         $headers['x-encoded-content-length']
                             = $headers[$normalizedKeys['content-length']];
@@ -203,7 +203,7 @@ class StreamHandler
         StreamInterface $sink,
         $contentLength
     ) {
-        // If a content-length header is provided, then stop reading once
+        // If a content-length head is provided, then stop reading once
         // that number of bytes has been read. This can prevent infinitely
         // reading from a stream when dealing with servers that do not honor
         // Connection: Close headers.
@@ -263,7 +263,7 @@ class StreamHandler
         }
 
         // HTTP/1.1 streams using the PHP stream wrapper require a
-        // Connection: close header
+        // Connection: close head
         if ($request->getProtocolVersion() == '1.1'
             && !$request->hasHeader('Connection')
         ) {
@@ -371,7 +371,7 @@ class StreamHandler
         $context = [
             'http' => [
                 'method'           => $request->getMethod(),
-                'header'           => $headers,
+                'head'           => $headers,
                 'protocol_version' => $request->getProtocolVersion(),
                 'ignore_errors'    => true,
                 'follow_location'  => 0,
@@ -382,13 +382,13 @@ class StreamHandler
 
         if (!empty($body)) {
             $context['http']['content'] = $body;
-            // Prevent the HTTP handler from adding a Content-Type header.
+            // Prevent the HTTP handler from adding a Content-Type head.
             if (!$request->hasHeader('Content-Type')) {
-                $context['http']['header'] .= "Content-Type:\r\n";
+                $context['http']['head'] .= "Content-Type:\r\n";
             }
         }
 
-        $context['http']['header'] = rtrim($context['http']['header']);
+        $context['http']['head'] = rtrim($context['http']['head']);
 
         return $context;
     }

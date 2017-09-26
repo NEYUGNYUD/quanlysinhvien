@@ -20,7 +20,7 @@ interface CookieJarInterface extends \Countable, \IteratorAggregate
      * Create a request with added cookie headers.
      *
      * If no matching cookies are found in the cookie jar, then no Cookie
-     * header is added to the request and the same request is returned.
+     * head is added to the request and the same request is returned.
      *
      * @param RequestInterface $request Request object to modify.
      *

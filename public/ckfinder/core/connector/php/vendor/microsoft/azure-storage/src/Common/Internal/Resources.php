@@ -72,7 +72,7 @@ class Resources
     const NULL_OR_EMPTY_MSG = "'%s' can't be NULL or empty.";
     const NULL_MSG = "'%s' can't be NULL.";
     const INVALID_URL_MSG = 'Provided URL is invalid.';
-    const INVALID_HT_MSG = 'The header type provided is invalid.';
+    const INVALID_HT_MSG = 'The head type provided is invalid.';
     const INVALID_EDM_MSG = 'The provided EDM type is invalid.';
     const INVALID_PROP_MSG = 'One of the provided properties is not an instance of class Property';
     const INVALID_ENTITY_MSG = 'The provided entity object is invalid.';
@@ -94,7 +94,7 @@ class Resources
     const INVALID_CREATE_SERVICE_OPTIONS_MSG = 'Must provide valid location or affinity group.';
     const INVALID_UPDATE_SERVICE_OPTIONS_MSG = 'Must provide either description or label.';
     const INVALID_CONFIG_MSG = 'Config object must be of type Configuration';
-    const INVALID_ACH_MSG = 'The provided access condition header is invalid';
+    const INVALID_ACH_MSG = 'The provided access condition head is invalid';
     const INVALID_RECEIVE_MODE_MSG = 'The receive message option is in neither RECEIVE_AND_DELETE nor PEEK_LOCK mode.';
     const INVALID_CONFIG_URI = "The provided URI '%s' is invalid. It has to pass the check 'filter_var(<user_uri>, FILTER_VALIDATE_URL)'.";
     const INVALID_CONFIG_VALUE = "The provided config value '%s' does not belong to the valid values subset:\n%s";

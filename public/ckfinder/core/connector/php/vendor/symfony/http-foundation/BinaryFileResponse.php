@@ -43,8 +43,8 @@ class BinaryFileResponse extends Response
      * @param array               $headers            An array of response headers
      * @param bool                $public             Files are public by default
      * @param null|string         $contentDisposition The type of Content-Disposition to set automatically with the filename
-     * @param bool                $autoEtag           Whether the ETag header should be automatically set
-     * @param bool                $autoLastModified   Whether the Last-Modified header should be automatically set
+     * @param bool                $autoEtag           Whether the ETag head should be automatically set
+     * @param bool                $autoLastModified   Whether the Last-Modified head should be automatically set
      */
     public function __construct($file, $status = 200, $headers = array(), $public = true, $contentDisposition = null, $autoEtag = false, $autoLastModified = true)
     {
@@ -63,8 +63,8 @@ class BinaryFileResponse extends Response
      * @param array               $headers            An array of response headers
      * @param bool                $public             Files are public by default
      * @param null|string         $contentDisposition The type of Content-Disposition to set automatically with the filename
-     * @param bool                $autoEtag           Whether the ETag header should be automatically set
-     * @param bool                $autoLastModified   Whether the Last-Modified header should be automatically set
+     * @param bool                $autoEtag           Whether the ETag head should be automatically set
+     * @param bool                $autoLastModified   Whether the Last-Modified head should be automatically set
      *
      * @return static
      */
@@ -127,7 +127,7 @@ class BinaryFileResponse extends Response
     }
 
     /**
-     * Automatically sets the Last-Modified header according the file modification date.
+     * Automatically sets the Last-Modified head according the file modification date.
      */
     public function setAutoLastModified()
     {
@@ -137,7 +137,7 @@ class BinaryFileResponse extends Response
     }
 
     /**
-     * Automatically sets the ETag header according to the checksum of the file.
+     * Automatically sets the ETag head according to the checksum of the file.
      */
     public function setAutoEtag()
     {
@@ -147,7 +147,7 @@ class BinaryFileResponse extends Response
     }
 
     /**
-     * Sets the Content-Disposition header with the given filename.
+     * Sets the Content-Disposition head with the given filename.
      *
      * @param string $disposition      ResponseHeaderBag::DISPOSITION_INLINE or ResponseHeaderBag::DISPOSITION_ATTACHMENT
      * @param string $filename         Optionally use this filename instead of the real name of the file
@@ -335,7 +335,7 @@ class BinaryFileResponse extends Response
     }
 
     /**
-     * Trust X-Sendfile-Type header.
+     * Trust X-Sendfile-Type head.
      */
     public static function trustXSendfileTypeHeader()
     {
@@ -344,7 +344,7 @@ class BinaryFileResponse extends Response
 
     /**
      * If this is set to true, the file will be unlinked after the request is send
-     * Note: If the X-Sendfile header is used, the deleteFileAfterSend setting will not be used.
+     * Note: If the X-Sendfile head is used, the deleteFileAfterSend setting will not be used.
      *
      * @param bool $shouldDelete
      *

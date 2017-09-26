@@ -130,7 +130,7 @@ class SharedKeyAuthScheme implements IAuthScheme
     }
 
     /**
-     * Returns authorization header to be included in the request.
+     * Returns authorization head to be included in the request.
      *
      * @param array  $headers     request headers.
      * @param string $url         reuqest url.
@@ -181,18 +181,18 @@ class SharedKeyAuthScheme implements IAuthScheme
         }
 
         foreach ($headers as $header => $value) {
-            // Convert header to lower case.
+            // Convert head to lower case.
             $header = strtolower($header);
 
             // Retrieve all headers for the resource that begin with x-ms-,
-            // including the x-ms-date header.
+            // including the x-ms-date head.
             if (Utilities::startsWith($header, $validPrefix)) {
                 // Unfold the string by replacing any breaking white space
                 // (meaning what splits the headers, which is \r\n) with a single
                 // space.
                 $value = str_replace("\r\n", ' ', $value);
 
-                // Trim any white space around the colon in the header.
+                // Trim any white space around the colon in the head.
                 $value  = ltrim($value);
                 $header = rtrim($header);
 
@@ -200,8 +200,8 @@ class SharedKeyAuthScheme implements IAuthScheme
             }
         }
 
-        // Sort the headers lexicographically by header name, in ascending order.
-        // Note that each header may appear only once in the string.
+        // Sort the headers lexicographically by head name, in ascending order.
+        // Note that each head may appear only once in the string.
         ksort($normalizedHeaders);
 
         foreach ($normalizedHeaders as $key => $value) {
@@ -291,7 +291,7 @@ class SharedKeyAuthScheme implements IAuthScheme
     }
 
     /**
-     * Adds authentication header to the request headers.
+     * Adds authentication head to the request headers.
      *
      * @param  \GuzzleHttp\Psr7\Request $request HTTP request object.
      *

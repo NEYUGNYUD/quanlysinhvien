@@ -59,7 +59,7 @@ class SharedAccessSignatureAuthScheme implements IAuthScheme
     }
 
     /**
-     * Adds authentication header to the request headers.
+     * Adds authentication head to the request headers.
      *
      * @param  \GuzzleHttp\Psr7\Request $request HTTP request object.
      *

@@ -187,7 +187,7 @@ final class Middleware
         };
     }
     /**
-     * Middleware wrapper function that adds an invocation id header to
+     * Middleware wrapper function that adds an invocation id head to
      * requests, which is only applied after the build step.
      *
      * This is a uniquely generated UUID to identify initial and subsequent
@@ -210,7 +210,7 @@ final class Middleware
         };
     }
     /**
-     * Middleware wrapper function that adds a Content-Type header to requests.
+     * Middleware wrapper function that adds a Content-Type head to requests.
      * This is only done when the Content-Type has not already been set, and the
      * request body's URI is available. It then checks the file extension of the
      * URI to determine the mime-type.

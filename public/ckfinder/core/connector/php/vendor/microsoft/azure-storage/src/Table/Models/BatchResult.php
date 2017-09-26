@@ -95,7 +95,7 @@ class BatchResult
     }
     
     /**
-     * Compares between two responses by Content-ID header.
+     * Compares between two responses by Content-ID head.
      *
      * @param mixed $r1 The first response object.
      * @param mixed $r2 The second response object.

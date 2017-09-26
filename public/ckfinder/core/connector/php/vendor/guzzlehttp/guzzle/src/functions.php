@@ -54,7 +54,7 @@ function describe_type($input)
 }
 
 /**
- * Parses an array of header lines into an associative array of headers.
+ * Parses an array of head lines into an associative array of headers.
  *
  * @param array $lines Header lines array of strings in the following
  *                     format: "Name: Value"
@@ -214,8 +214,8 @@ EOT
 }
 
 /**
- * Creates an associative array of lowercase header names to the actual
- * header casing.
+ * Creates an associative array of lowercase head names to the actual
+ * head casing.
  *
  * @param array $headers
  *

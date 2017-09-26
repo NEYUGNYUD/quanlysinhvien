@@ -85,7 +85,7 @@ class CreateContainerOptions extends BlobServiceOptions
     }
     
     /**
-     * Sets user defined metadata. This metadata should be added without the header
+     * Sets user defined metadata. This metadata should be added without the head
      * prefix (x-ms-meta-*).
      *
      * @param array $metadata user defined metadata object in array form.
@@ -98,7 +98,7 @@ class CreateContainerOptions extends BlobServiceOptions
     }
     
     /**
-     * Adds new metadata element. This element should be added without the header
+     * Adds new metadata element. This element should be added without the head
      * prefix (x-ms-meta-*).
      *
      * @param string $key   metadata key element.

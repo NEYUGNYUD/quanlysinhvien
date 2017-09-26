@@ -42,7 +42,7 @@ class LogFileReader
             'ResponseContentEncoding' => 'x-gzip'
         ]);
 
-        // Make sure gzip encoding header is sent and accepted in order to
+        // Make sure gzip encoding head is sent and accepted in order to
         // inflate the response data.
         $command['@http']['headers']['Accept-Encoding'] = 'gzip';
 

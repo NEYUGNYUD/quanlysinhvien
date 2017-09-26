@@ -18,8 +18,8 @@ namespace Symfony\Polyfill\Mbstring;
  * - mb_chr                  - Returns a specific character from its Unicode code point
  * - mb_convert_encoding     - Convert character encoding
  * - mb_convert_variables    - Convert character code in variable(s)
- * - mb_decode_mimeheader    - Decode string in MIME header field
- * - mb_encode_mimeheader    - Encode string for MIME header XXX NATIVE IMPLEMENTATION IS REALLY BUGGED
+ * - mb_decode_mimeheader    - Decode string in MIME head field
+ * - mb_encode_mimeheader    - Encode string for MIME head XXX NATIVE IMPLEMENTATION IS REALLY BUGGED
  * - mb_convert_case         - Perform case folding on a string
  * - mb_get_info             - Get internal settings of mbstring
  * - mb_http_input           - Detect HTTP input character encoding

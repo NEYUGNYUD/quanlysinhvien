@@ -189,11 +189,11 @@ class Client implements ClientInterface
             $this->config['cookies'] = new CookieJar();
         }
 
-        // Add the default user-agent header.
+        // Add the default user-agent head.
         if (!isset($this->config['headers'])) {
             $this->config['headers'] = ['User-Agent' => default_user_agent()];
         } else {
-            // Add the User-Agent header if one was not already set.
+            // Add the User-Agent head if one was not already set.
             foreach (array_keys($this->config['headers']) as $name) {
                 if (strtolower($name) === 'user-agent') {
                     return;
