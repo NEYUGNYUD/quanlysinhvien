@@ -1,5 +1,5 @@
-<script src="/admin/js/modernizr.js"></script>
+<script src=" {{ asset('/admin/js/modernizr.js') }}"></script>
 
-<script src="/admin/js/jquery.js"></script>
+<script src=" {{ asset('/admin/js/jquery.js') }}"></script>
 
-@yield('js_head')
+@yield('js-head')
