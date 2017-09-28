@@ -21,7 +21,7 @@
                                 <span>Trang chủ</span>
                             </a>
                         </li>
-                        <li class="nav-parent nav-expanded nav-active">
+                        <li class="nav-parent nav-active">
                             <a>
                                 <i class="fa fa-cog" aria-hidden="true"></i>
                                 <span>Cài đặt chung</span>
@@ -36,12 +36,37 @@
                                 </li>
                             </ul>
                         </li>
+                        <!---------------------------------------------------->
+                        <li class="nav-parent nav-active">
+                            <a>
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                <span>Quản lý tài khoản admin</span>
+                            </a>
+                            <ul class="nav nav-children">
+                                <li class="nav-active">
+                                    <a href="hoteldiagram.php">Danh sách tài khoản</a>
+                                </li>
 
-                        <li>
+                                <li>
+                                    <a href="check-out.php">Tạo tài khoản</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-parent nav-active">
                             <a href="liabilities.php">
                                 <i class="fa  fa-fax" aria-hidden="true"></i>
                                 <span>Quản lý công nợ</span>
                             </a>
+                            <ul class="nav nav-children">
+                                <li>
+                                    <a href="hoteldiagram.php">Danh sách tài khoản</a>
+                                </li>
+
+                                <li>
+                                    <a href="check-out.php">Tạo tài khoản</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
