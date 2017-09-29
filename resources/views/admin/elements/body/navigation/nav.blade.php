@@ -6,7 +6,13 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <!--Menu-->
         @include('admin.elements.body.navigation.menu.menu')
-        <!--Logout-->
-        @include('admin.elements.body.navigation.logout.logout')
+        <ul class="navbar-nav ml-auto">
+            <!-- Account-->
+            @include('admin.elements.body.navigation.account.account')
+            <!-- Search box -->
+            @include('admin.elements.body.navigation.search_box.search')
+            <!--Logout-->
+            {{--@include('admin.elements.body.navigation.logout.logout')--}}
+        </ul>
     </div>
 </nav>
