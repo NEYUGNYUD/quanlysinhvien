@@ -24,7 +24,8 @@ class LevelRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5|max:50'
+            'name' => 'required|min:5|max:50',
+            'description' => 'min:5|max:190'
         ];
     }
 
@@ -33,7 +34,9 @@ class LevelRequest extends FormRequest
         return [
             'name.required' => 'Tên quyền bỏ trống',
             'name.min' => 'Độ dài tên từ 5 đến 50 ký tự',
-            'name.max' => 'Độ dài tên từ 5 đến 50 ký tự'
+            'name.max' => 'Độ dài tên từ 5 đến 50 ký tự',
+            'description.max' => 'Độ dài mô tả từ 5 đến 190 ký tự',
+            'description.max' => 'Độ dài mô tả từ 5 đến 190 ký tự'
         ];
     }
 }
