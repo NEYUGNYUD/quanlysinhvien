@@ -1,19 +1,6 @@
-<!doctype html>
-<html class="fixed">
 <head>
-
-    <title>@yield('title')</title>
-
-    <!-- Meta -->
     @include('admin.elements.head.meta.meta')
-
-    <!-- font -->
-    @include('admin.elements.head.fonts.font')
-
-    <!-- css -->
+    <title>@yield('title')</title>
+    <!-- Bootstrap core CSS-->
     @include('admin.elements.head.css.css')
-
-    <!-- js -->
-    @include('admin.elements.head.js.js')
-
 </head>

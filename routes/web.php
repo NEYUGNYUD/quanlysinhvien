@@ -11,14 +11,19 @@
 |
 */
 
+use App\Http\Controllers\LevelController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('test', function () {
-    return view('admin.pages.account.list');
+Route::get('test', 'LevelController@test');
+
+Route::prefix('/admin')->group(function() {
+
+    Auth::routes();
+
+    Route::resource('levels', 'LevelController');
 });
