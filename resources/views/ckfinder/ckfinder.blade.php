@@ -6,14 +6,15 @@
             onInit: function( finder ) {
                 finder.on( 'files:choose', function( evt ) {
                     var file = evt.data.files.first();
-                    document.getElementById( {{ $id }} ).value = file.getUrl();
+//                    $fileId phai la so moi dung
+                    document.getElementById( {{ $fileId }} ).value = file.getUrl();
                 } );
                 finder.on( 'file:choose:resizedImage', function( evt ) {
-                    document.getElementById( {{ $id }} ).value = evt.data.resizedUrl;
+                    document.getElementById( {{ $fileId }} ).value = evt.data.resizedUrl;
                 } );
             }
         } );
     }
 </script>
-<input type="text" size="48" name=" {{ $name }}" id="{{ $id }}" class="form-control" />
+<input type="text" size="48" name=" {{ $fileName }}" id="{{ $fileId }}" class="form-control" readonly required/><br>
 <button onclick="openPopup()" class="btn btn-default">Select file</button>

@@ -39,7 +39,7 @@ abstract class BaseRepositoryAbstract implements BaseRepositoryInterface {
 
     public function create(array $data)
     {
-        $this->model->create($data);
+        return($this->model->create($data));
     }
 
     public function update($model, $data)

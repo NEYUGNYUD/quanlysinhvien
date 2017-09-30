@@ -21,6 +21,21 @@
         </ul>
     </li>
 
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#admin-account" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Account Admin</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="admin-account">
+            <li>
+                <a href="{{ route('accounts.index') }}">Danh sách account admin</a>
+            </li>
+            <li>
+                <a href="{{ route('accounts.create') }}">Tạo account admin</a>
+            </li>
+        </ul>
+    </li>
+
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>

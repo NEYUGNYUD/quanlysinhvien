@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Level;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar', 'level', 'locked'
+        'name', 'email', 'password', 'avatar', 'level_id', 'locked', 'remember_token'
     ];
 
     /**
@@ -29,5 +30,10 @@ class User extends Authenticatable
 
     public function level() {
         return $this->belongsTo('App\Level', 'level_id', 'id');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'name';
     }
 }

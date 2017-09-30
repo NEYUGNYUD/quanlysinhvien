@@ -19,11 +19,15 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('test', 'LevelController@test');
+Route::get('test', function() {
+    return view('test.ckfinder', ['id' => 1, 'name' => 'upload']);
+});
 
 Route::prefix('/admin')->group(function() {
 
     Auth::routes();
 
     Route::resource('levels', 'LevelController');
+
+    Route::resource('accounts', 'AdminController');
 });

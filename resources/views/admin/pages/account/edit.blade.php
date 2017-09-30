@@ -7,13 +7,13 @@
     Account Admin
 @endsection
 @section('function-name')
-    Tạo account admin
+    Chỉnh sửa account admin
 @endsection
 
 @section('content')
     <div class="col-md-12">
         @include('error_notification.error')
-        <form id="summary-form" action=" {{ route('accounts.store') }}" class="form-horizontal" method="post">
+        <form id="summary-form" action=" {{ route('accounts.update') }}" class="form-horizontal" method="post">
             {{ csrf_field() }}
             <section class="panel">
                 <div class="panel-body">
@@ -58,7 +58,7 @@
                             <select name="level" class="form-control">
                                 @if(isset($levelsList))
                                     @foreach($levelsList as $level)
-                                    <option value="{{ $level->id }}"> {{ $level->name }}</option>
+                                        <option value="{{ $level->id }}"> {{ $level->name }}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -68,7 +68,7 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label"></label>
                         <div class="col-sm-6">
-                            <button class="btn btn-primary">Thêm</button>
+                            <button class="btn btn-primary">Cập nhât</button>
                             <button type="reset" class="btn btn-default">Hủy</button>
                         </div>
                     </div>

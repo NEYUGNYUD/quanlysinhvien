@@ -23,9 +23,15 @@ class CustomizeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            'App\Repositories\Level\LevelRepositoryInterface',
-            'App\Repositories\Level\LevelRepository'
-        );
+        $bindArr = [
+            'App\Repositories\Level\LevelRepositoryInterface' => 'App\Repositories\Level\LevelRepository',
+            'App\Repositories\AdminAccount\AdminAccountRepositoryInterface' => 'App\Repositories\AdminAccount\AdminAccountRepository'
+        ];
+
+        foreach ($bindArr as $key => $value) {
+            $this->app->bind(
+                $key, $value
+            );
+        }
     }
 }

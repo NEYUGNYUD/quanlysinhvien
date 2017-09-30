@@ -8,6 +8,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-@include('ckfinder.ckfinder', ['id' => '1', 'name' => 'upload'])
+@include('ckfinder.ckfinder', ['fileId' => '1', 'fileName' => 'upload'])
 </body>
 </html>
