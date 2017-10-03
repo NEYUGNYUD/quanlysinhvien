@@ -27,8 +27,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
 
+    protected $redirectTo = '/admin/accounts';
     /**
      * Create a new controller instance.
      *
@@ -47,11 +47,34 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        //có thể tùy chỉnh thông báo lỗi khi validation bằng cách truyền 1 mảng thông báo lỗi
+        //tùy ý thành tham số thứ 3 của hàm make
+        $rules = [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+            'password' => 'required|string|min:8',
+            're-password' => 'same:password',
+            'avatar' => 'required'
+        ];
+
+        $messages = [
+            'name.required' => 'Tên bỏ trống',
+            'name.string' => 'Tên phải là 1 chuỗi ký tự',
+            'name.max' => 'Độ dài tôi đa của tên là 255 ký tự' ,
+            'email.required' => 'Email bỏ trống',
+            'email.string' => 'Email phải là 1 string',
+            'email.email' => 'Email không đúng định dạng',
+            'email.max' => 'Độ dài email tối đa 255 ký tự',
+            'email.unique' => 'Email đã tồn tại',
+            'password.required' => 'Mật khẩu bỏ trống',
+            'password.string' => 'Mật khẩu phải là string',
+            'password.min' => 'Độ dài mật khẩu tối thiểu 8 ký tự',
+            're-password.same' => 'Mật khẩu không trùng nhau',
+            'avatar.required' => 'Avatar bỏ trống'
+        ];
+
+
+        return Validator::make($data, $rules, $messages);
     }
 
     /**
@@ -66,6 +89,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'avatar' => $data['avatar'],
+            'level_id' => $data['level'],
+            'locked' => "",
         ]);
     }
 }

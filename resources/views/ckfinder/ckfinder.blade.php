@@ -16,5 +16,5 @@
         } );
     }
 </script>
-<input type="text" size="48" name=" {{ $fileName }}" id="{{ $fileId }}" class="form-control" readonly required/><br>
+<input type="text" size="48" name=" {{ $fileName }}" id="{{ $fileId }}" class="form-control" value="{{ old($fileName) }}" readonly required/><br>
 <button onclick="openPopup()" class="btn btn-default">Select file</button>

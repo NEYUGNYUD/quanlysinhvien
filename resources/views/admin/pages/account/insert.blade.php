@@ -13,7 +13,7 @@
 @section('content')
     <div class="col-md-12">
         @include('error_notification.error')
-        <form id="summary-form" action=" {{ route('accounts.store') }}" class="form-horizontal" method="post">
+        <form id="summary-form" action=" {{ route('register') }}" class="form-horizontal" method="post">
             {{ csrf_field() }}
             <section class="panel">
                 <div class="panel-body">
