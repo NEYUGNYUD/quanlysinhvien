@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LevelRequest;
 use App\Repositories\Level\LevelRepositoryInterface;
-use function compact;
 use Illuminate\Http\Request;
 
 class LevelController extends Controller

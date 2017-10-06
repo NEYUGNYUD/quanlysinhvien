@@ -25,7 +25,8 @@ class CustomizeServiceProvider extends ServiceProvider
     {
         $bindArr = [
             'App\Repositories\Level\LevelRepositoryInterface' => 'App\Repositories\Level\LevelRepository',
-            'App\Repositories\AdminAccount\AdminAccountRepositoryInterface' => 'App\Repositories\AdminAccount\AdminAccountRepository'
+            'App\Repositories\AdminAccount\AdminAccountRepositoryInterface' => 'App\Repositories\AdminAccount\AdminAccountRepository',
+            'App\Repositories\Year\YearRepositoryInterface' => 'App\Repositories\Year\YearRepository'
         ];
 
         foreach ($bindArr as $key => $value) {

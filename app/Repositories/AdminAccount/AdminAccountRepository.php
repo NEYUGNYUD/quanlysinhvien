@@ -8,7 +8,6 @@
 
 namespace App\Repositories\AdminAccount;
 
-
 use App\Repositories\BaseRepositoryAbstract;
 use App\User;
 

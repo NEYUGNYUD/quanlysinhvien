@@ -12,7 +12,6 @@
             <!-- Search box -->
             @include('admin.elements.body.navigation.search_box.search')
             <!--Logout-->
-            {{--@include('admin.elements.body.navigation.logout.logout')--}}
         </ul>
     </div>
 </nav>

@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Year extends Model
 {
     protected $table = 'years';
-    protected $timestamps = false;
+    public $timestamps = false;
+    protected $fillable = ['year'];
 
     public function students() {
         return $this->hasMany('App\Student', 'year_start', 'id');
@@ -15,5 +16,9 @@ class Year extends Model
 
     public function scoreExpression() {
         return $this->hasOne('App\ScoreExpression', 'year_id');
+    }
+
+    public function getRouteKeyName() {
+        return 'year';
     }
 }

@@ -1,9 +1,24 @@
 <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
         </a>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#year" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Năm học</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="year">
+            <li>
+                <a href="{{ route('years.index') }}">Danh sách năm học</a>
+            </li>
+            <li>
+                <a href="{{ route('years.create') }}">Chỉnh sửa năm học</a>
+            </li>
+        </ul>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">

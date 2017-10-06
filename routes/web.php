@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LevelController;
 
 Route::get('/', function () {
@@ -20,14 +21,18 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('test', function() {
-    return view('test.ckfinder', ['id' => 1, 'name' => 'upload']);
+    return view('auth.passwords.reset2');
 });
 
 Route::prefix('/admin')->group(function() {
 
     Auth::routes();
 
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+
     Route::resource('levels', 'LevelController');
 
     Route::resource('accounts', 'AdminController');
+    
+    Route::resource('years', 'YearController');
 });
