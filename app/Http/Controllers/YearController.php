@@ -35,7 +35,14 @@ class YearController extends Controller
 		return view('admin.pages.year.edit', ['year' => $year]);
 	}
 
-	public function update(Year $year, YearRequest $request) {
-		echo 'd'; die();
+	public function show(Year $year) {
+
+	}
+
+	public function update(YearRequest $request, Year $year) {
+		$data = array();
+		$data['year'] = $request->year;
+		$this->yearRepository->update($year, $data);
+		return redirect()->route('years.index')->with('notification', 'Cập nhật thành công');
 	}
 }

@@ -33,6 +33,9 @@ Route::prefix('/admin')->group(function() {
     Route::resource('levels', 'LevelController');
 
     Route::resource('accounts', 'AdminController');
-    
-    Route::resource('years', 'YearController');
+
+    Route::resource('years', 'YearController', [
+        'except' => ['update']
+    ]);
+    Route::post('years/{year}', 'YearController@update')->name('years.update');
 });

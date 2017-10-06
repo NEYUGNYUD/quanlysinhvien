@@ -44,6 +44,7 @@ abstract class BaseRepositoryAbstract implements BaseRepositoryInterface {
 
     public function update($model, $data)
     {
+        $model->update($data);
     }
 
     public function destroy($id)
