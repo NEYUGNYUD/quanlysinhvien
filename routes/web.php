@@ -45,4 +45,9 @@ Route::prefix('/admin')->group(function() {
 
     Route::post('faculties/{faculty}', 'FacultyController@update')->name('faculties.update');
 
+    Route::resource('classes', 'StudentClassController', [
+        'except' => ['update', 'destroy']
+    ]);
+
+    Route::post('classes/{class}', 'StudentClassController@update')->name('classes.update');
 });

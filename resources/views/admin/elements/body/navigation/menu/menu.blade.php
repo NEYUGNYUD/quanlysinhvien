@@ -22,6 +22,21 @@
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#classes" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Lớp học</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="classes">
+            <li>
+                <a href="{{ route('classes.index') }}">Danh sách lớp học</a>
+            </li>
+            <li>
+                <a href="{{ route('classes.create') }}">Thêm mới lớp học</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#year" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Năm học</span>

@@ -28,6 +28,7 @@ class CustomizeServiceProvider extends ServiceProvider
             'App\Repositories\AdminAccount\AdminAccountRepositoryInterface' => 'App\Repositories\AdminAccount\AdminAccountRepository',
             'App\Repositories\Year\YearRepositoryInterface' => 'App\Repositories\Year\YearRepository',
             'App\Repositories\Faculty\FacultyRepositoryInterface' => 'App\Repositories\Faculty\FacultyRepository',
+            'App\Repositories\StudentClass\StudentClassRepositoryInterface' => 'App\Repositories\StudentClass\StudentClassRepository',
             
         ];
 
