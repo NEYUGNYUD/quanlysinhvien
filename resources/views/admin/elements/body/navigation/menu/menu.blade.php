@@ -37,6 +37,36 @@
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#teacher" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Giáo viên</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="teacher">
+            <li>
+                <a href="{{ route('teachers.index') }}">Danh sách giáo viên</a>
+            </li>
+            <li>
+                <a href="{{ route('teachers.create') }}">Thêm mới giáo viên</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#role" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Chức vụ giáo viên</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="role">
+            <li>
+                <a href="{{ route('roles.index') }}">Danh sách chức vụ</a>
+            </li>
+            <li>
+                <a href="{{ route('roles.create') }}">Thêm mới chức vụ</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#year" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Năm học</span>
