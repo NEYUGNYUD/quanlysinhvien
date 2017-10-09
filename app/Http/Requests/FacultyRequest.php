@@ -13,7 +13,7 @@ class FacultyRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class FacultyRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'code' => 'required',
+        ];
+    }
+
+    public function messages() {
+        return [
+            'name.required' => 'Tên khoa trống',
+            'code.required' => 'Mã khoa trống'
         ];
     }
 }

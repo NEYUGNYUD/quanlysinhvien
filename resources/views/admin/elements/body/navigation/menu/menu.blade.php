@@ -7,6 +7,21 @@
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#falcuty" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Khoa toán</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="falcuty">
+            <li>
+                <a href="{{ route('faculties.create') }}">Khởi tạo thông tin khoa</a>
+            </li>
+            <li>
+                <a href="{{ route('faculties.index') }}">Thông tin khoa</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#year" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Năm học</span>
@@ -16,7 +31,7 @@
                 <a href="{{ route('years.index') }}">Danh sách năm học</a>
             </li>
             <li>
-                <a href="{{ route('years.create') }}">Chỉnh sửa năm học</a>
+                <a href="{{ route('years.create') }}">Thêm năm học</a>
             </li>
         </ul>
     </li>

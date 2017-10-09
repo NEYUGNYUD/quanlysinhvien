@@ -38,4 +38,11 @@ Route::prefix('/admin')->group(function() {
         'except' => ['update']
     ]);
     Route::post('years/{year}', 'YearController@update')->name('years.update');
+
+    Route::resource('faculties', 'FacultyController', [
+        'except' => ['update', 'destroy']
+    ]);
+
+    Route::post('faculties/{faculty}', 'FacultyController@update')->name('faculties.update');
+
 });
