@@ -24,7 +24,7 @@ class TeacherRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'required|min:8|max:8|unique:teachers',
+            'code' => 'required|min:8|max:8|unique:teachers,code,'.$this->teacher->id,
             'last_name' => 'required|min:2|max:50',
             'first_name' => 'required|min:2|max:50',
             'address' => 'required|min:5|max:100',

@@ -18,7 +18,7 @@
 
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="over-flow:auto;">
                     <thead>
                     <tr>
                         <th>STT</th>
@@ -65,7 +65,9 @@
                             <td>{{ $teacher->last_name }}</td>
                             <td>{{ $teacher->address }}</td>
                             <td>{{ $teacher->dob }}</td>
-                            <td>{{ $teacher->gender }}</td>
+                            <td>
+                                {{ $teacher->gender == '1'?'Nam':'Nữ' }}
+                            </td>
                             <td>{{ $teacher->phone }}</td>
                             <td>{{ $teacher->passport }}</td>
                             <td>{{ $teacher->email }}</td>

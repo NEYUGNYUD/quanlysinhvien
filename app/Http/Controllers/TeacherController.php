@@ -53,4 +53,28 @@ class TeacherController extends Controller
         $this->teacherRepository->create($data);
         return redirect()->route('teachers.index')->with('notification', 'Thêm thành công');
     }
+
+    public function edit(Teacher $teacher) {
+        $rolesList = $this->roleRepository->all();
+        $facultiesList = $this->facultyRepository->all();
+        return view('admin.pages.teacher.edit', ['teacher' => $teacher, 'rolesList' => $rolesList, 'facultiesList' => $facultiesList]);
+    }
+
+    public function update(TeacherRequest $request, Teacher $teacher) {
+        $data = array();
+        $data['code'] = $request->code;
+        $data['first_name'] = $request->first_name;
+        $data['last_name'] = $request->last_name;
+        $data['address'] = $request->address;
+        $data['dob'] = $request->dob;
+        $data['gender'] = $request->gender;
+        $data['email'] = $request->email;
+        $data['passport'] = $request->passport;
+        $data['phone'] = $request->phone;
+        $data['faculty_id'] = $request->faculty;
+        $data['role_id'] = $request->role;
+        $data['updated_at'] = date('Y:m:d H:i:s');
+        $this->teacherRepository->update($teacher, $data);
+        return redirect()->route('teachers.index')->with('notification', 'Chỉnh sửa thành công');
+    }
 }
