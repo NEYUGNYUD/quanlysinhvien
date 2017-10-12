@@ -20,8 +20,6 @@ class CreateParentsTable extends Migration
                 $table->string('dad_job', 100);
                 $table->string('mom_name', 100);
                 $table->string('mom_job', 100);
-                $table->string('dad_address', 100);
-                $table->string('mom_address', 100);
                 $table->string('dad_phone', 11);
                 $table->string('mom_phone', 11);
                 $table->integer('student_id')->unsigned();
