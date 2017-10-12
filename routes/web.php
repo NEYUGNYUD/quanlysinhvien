@@ -63,5 +63,9 @@ Route::prefix('/admin')->group(function() {
 
     Route::post('roles/{role}', 'RoleController@update')->name('roles.update');
 
+    Route::resource('students', 'StudentController', [
+        'except' => ['update']
+    ]);
 
+    Route::post('students/{student}', 'StudentController@update')->name('students.update');
 });

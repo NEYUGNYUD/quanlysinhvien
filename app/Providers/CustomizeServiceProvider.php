@@ -31,6 +31,7 @@ class CustomizeServiceProvider extends ServiceProvider
             'App\Repositories\StudentClass\StudentClassRepositoryInterface' => 'App\Repositories\StudentClass\StudentClassRepository',
             'App\Repositories\Teacher\TeacherRepositoryInterface' => 'App\Repositories\Teacher\TeacherRepository',
             'App\Repositories\Role\RoleRepositoryInterface' => 'App\Repositories\Role\RoleRepository',
+            'App\Repositories\Student\StudentRepositoryInterface' => 'App\Repositories\Student\StudentRepository',
             
         ];
 

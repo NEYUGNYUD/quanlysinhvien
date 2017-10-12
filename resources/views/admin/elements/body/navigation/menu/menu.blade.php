@@ -52,6 +52,21 @@
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#student" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Sinh viên</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="student">
+            <li>
+                <a href="{{ route('students.index') }}">Danh sách sinh viên</a>
+            </li>
+            <li>
+                <a href="{{ route('students.create') }}">Thêm mới sinh viên</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#role" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Chức vụ giáo viên</span>

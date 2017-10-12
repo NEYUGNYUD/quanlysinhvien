@@ -8,6 +8,8 @@ class Student extends Model
 {
     protected $table = 'students';
 
+    protected $fillable = ['code', 'first_name', 'last_name', 'dob', 'gender', 'address', 'password', 'class_id', 'year_id'];
+
     public function year() {
         return $this->belongsTo('App\Year', 'year_start', 'id');
     }
